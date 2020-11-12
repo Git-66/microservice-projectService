@@ -48,35 +48,4 @@ public class ProjectService {
         projectDao.deleteAll();
     }
 
-//    public List<Project> getProjectsByResourceId(int resouceId) {
-//        Specification<Project> specification = queryProjectCriteria(resouceId);
-//        return projectDao.findAll(specification);
-//    }
-
-//    private Specification<Project> queryProjectCriteria(int resouceId) {
-//        return new Specification<Project>() {
-//            @Override
-//            public Predicate toPredicate(Root<Project> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder cb) {
-//                List<Predicate> predicates = new ArrayList<>();
-//                Join<Resource, Project> join = root.join("resourceList", JoinType.LEFT);
-//                predicates.add(cb.equal(join.get("id"), resouceId));
-//                return criteriaQuery.where(predicates.toArray(new Predicate[predicates.size()])).getRestriction();
-//            }
-//        };
-//    }
-
-
-//    public Optional<Project> addResourcesToProject(List<Resource> resourceList, int projectId) {
-//        Optional<Project> existProject = projectDao.findById(projectId);
-//        if (existProject.isPresent()) {
-//            Project project = existProject.get();
-//            for (Resource resource : resourceList) {
-//                project.addResource(resource);
-//            }
-//            resourceDao.saveAll(resourceList);
-//            projectDao.save(project);
-//        }
-//        return existProject;
-//    }
-
 }
