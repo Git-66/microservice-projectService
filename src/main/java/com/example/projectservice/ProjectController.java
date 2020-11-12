@@ -18,12 +18,6 @@ public class ProjectController {
     @Autowired
     private ProjectService projectService;
 
-//    @Autowired
-//    private LoadBalancerClient loadBalancerClient;
-//
-//    @Autowired
-//    private RestTemplate restTemplate;
-
     @GetMapping("")
     public ResponseEntity<?> getAllProjects() {
         List<Project> projects = projectService.getAllProjects();
@@ -76,13 +70,4 @@ public class ProjectController {
         return new ResponseEntity<>("Deleted All Projects Successfully!", HttpStatus.OK);
     }
 
-//    @GetMapping("/resource/{id}")
-//    @ResponseBody
-//    public ResponseEntity<?> getProjectsByResourceId(@PathVariable Integer id) {
-//        List<Project> projects = projectService.getProjectsByResourceId(id);
-//        if (projects.isEmpty()) {
-//            return new ResponseEntity<>("No project for this resource!", HttpStatus.OK);
-//        }
-//        return new ResponseEntity<>(projects, HttpStatus.OK);
-//    }
 }
