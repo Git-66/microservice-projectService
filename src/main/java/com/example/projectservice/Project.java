@@ -38,41 +38,6 @@ public class Project {
     @JoinColumn(name = "user_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
 
-//    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-//    @JsonIdentityReference(alwaysAsId = true)
-//    @JsonProperty("userId")
-//    private User user;
-//
-//    @OneToMany(mappedBy = "project", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    private List<ProjectColumn> projectColumns;
-//
-//    @OneToMany(mappedBy = "project", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    private List<ProjectRow> projectRows;
-
-//    @ManyToMany(fetch = FetchType.LAZY)
-//    @JoinTable(
-//            name = "project_resource",
-//            joinColumns = @JoinColumn(name = "project_id"),
-//            inverseJoinColumns = @JoinColumn(name = "resource_id")
-//    )
-//    private List<Resource> resourceList;
-
-//    public Project() {
-//    }
-
-//    public Project(String name, User user) {
-//        this.name = name;
-//        this.user = user;
-//    }
-//
-//    public void addResource(Resource resource) {
-//        this.resourceList.add(resource);
-//    }
-//
-//    public void removeResource(Resource resource) {
-//        this.resourceList.remove(resource);
-//    }
-
     public int getId() {
         return id;
     }
@@ -105,45 +70,7 @@ public class Project {
         this.updateDate = updateDate;
     }
 
-//    public List<Resource> getResourceList() {
-//        return resourceList;
-//    }
-//
-//    public void setResourceList(List<Resource> resourceList) {
-//        this.resourceList = resourceList;
-//    }
-//
-//    @JsonBackReference
-//    public User getUser() {
-//        return user;
-//    }
-//
-//    public void setUser(User user) {
-//        this.user = user;
-//    }
-//
-////    @JsonProperty("userId")
-////    public void setUserById(int userId) {
-////        user = User.fromId(userId);
-////    }
-//
-//    @JsonManagedReference
-//    public List<ProjectColumn> getProjectColumns() {
-//        return projectColumns;
-//    }
-//
-//    public void setProjectColumns(List<ProjectColumn> projectColumns) {
-//        this.projectColumns = projectColumns;
-//    }
-//
-//    public List<ProjectRow> getProjectRows() {
-//        return projectRows;
-//    }
-//
-//    @JsonManagedReference
-//    public void setProjectRows(List<ProjectRow> projectRows) {
-//        this.projectRows = projectRows;
-//    }
+
 }
 
 
